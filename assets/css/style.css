@@ -564,11 +564,39 @@ body._lock {
   background-color: #F9EFFF;
 }
 .quiz__header {
+  overflow-x: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-bottom: 96px;
+  padding: 4px 0px 6px 0px;
+}
+@media (max-width: 991.98px) {
+  .quiz__header {
+    justify-content: stretch;
+  }
+}
+@media (min-width: 92.1875em) {
+  .quiz__header {
+    margin-bottom: 6rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 92.1875em) {
+  @supports (margin-bottom: clamp( 1.875rem , 0.7321428571rem  +  5.7142857143vw , 6rem )) {
+    .quiz__header {
+      margin-bottom: clamp( 1.875rem , 0.7321428571rem  +  5.7142857143vw , 6rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.875rem , 0.7321428571rem  +  5.7142857143vw , 6rem )) {
+    .quiz__header {
+      margin-bottom: calc(1.875rem + 4.125 * (100vw - 20rem) / 72.1875);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .quiz__header {
+    margin-bottom: 1.875rem;
+  }
 }
 .quiz__body {
   display: grid;
@@ -607,6 +635,11 @@ body._lock {
   border-radius: 32px;
   background-color: #FFF;
 }
+@media (max-width: 767.98px) {
+  .quiz__content {
+    padding: 32px 32px 32px 32px;
+  }
+}
 
 .header-quiz__item {
   display: flex;
@@ -617,6 +650,7 @@ body._lock {
   border-radius: 48px;
   min-height: 48px;
   background-color: #fff;
+  white-space: nowrap;
 }
 .header-quiz__item-icon {
   width: 32px;
@@ -659,8 +693,29 @@ body._lock {
   margin-bottom: 24px;
 }
 .content-quiz__image {
-  width: 256px;
-  height: 158px;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 92.1875em) {
+  .content-quiz__image {
+    width: 16rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 92.1875em) {
+  @supports (width: clamp( 9.375rem , 7.5395021645rem  +  9.1774891775vw , 16rem )) {
+    .content-quiz__image {
+      width: clamp( 9.375rem , 7.5395021645rem  +  9.1774891775vw , 16rem );
+    }
+  }
+  @supports not (width: clamp( 9.375rem , 7.5395021645rem  +  9.1774891775vw , 16rem )) {
+    .content-quiz__image {
+      width: calc(9.375rem + 6.625 * (100vw - 20rem) / 72.1875);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .content-quiz__image {
+    width: 9.375rem;
+  }
 }
 .content-quiz__image img {
   max-width: 100%;
@@ -672,6 +727,11 @@ body._lock {
 }
 .content-quiz__text:not(:last-child) {
   margin-bottom: 64px;
+}
+@media (max-width: 767px) {
+  .content-quiz__text:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 .content-quiz__questions {
   display: flex;
@@ -820,6 +880,11 @@ body._lock {
   padding-top: 48px;
   padding-bottom: 128px;
   background-color: #F9EFFF;
+}
+@media (max-width: 767px) {
+  .reviews {
+    padding-bottom: 90px;
+  }
 }
 .reviews__slide {
   width: 352px;
@@ -1151,7 +1216,7 @@ body._lock {
   border-radius: 32px;
   padding: 48px 32px;
   max-width: 676px;
-  top: 128px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #FFF;
@@ -1213,6 +1278,11 @@ body._lock {
   gap: 24px;
   margin-bottom: 24px;
 }
+@media (max-width: 479.98px) {
+  .form-popup__item-group {
+    grid-template-columns: auto;
+  }
+}
 .form-popup__items {
   margin-bottom: 64px;
 }
@@ -1223,6 +1293,11 @@ body._lock {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media (max-width: 767px) {
+  .form-popup__item {
+    min-height: 40px;
+  }
 }
 .form-popup__item._error {
   border-bottom: 2px solid red;
@@ -1238,6 +1313,22 @@ body._lock {
 .form-popup__input::placeholder {
   font-size: 32px;
   opacity: 0.3;
+}
+@media (max-width: 991.98px) {
+  .form-popup__input::-moz-placeholder {
+    font-size: 28px;
+  }
+  .form-popup__input::placeholder {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767.98px) {
+  .form-popup__input::-moz-placeholder {
+    font-size: 24px;
+  }
+  .form-popup__input::placeholder {
+    font-size: 24px;
+  }
 }
 .form-popup__file-input {
   display: none;
@@ -1269,12 +1360,18 @@ body._lock {
   position: absolute;
   top: calc(100% + 8px);
   z-index: 5;
-  left: 0;
+  right: 0;
   display: block;
   color: #fff;
   border-radius: 8px;
   background-color: #FF004C;
   padding: 12px;
+}
+@media (max-width: 767.98px) {
+  ._error-label {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
 ._error-label:before {
   content: "";
@@ -1308,7 +1405,7 @@ body._lock {
   border-radius: 32px;
   padding: 48px 32px;
   max-width: 676px;
-  top: 128px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #FFF;

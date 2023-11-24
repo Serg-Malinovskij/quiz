@@ -72,7 +72,7 @@ navigation: {
 },
 clikable: true,
 setWrapperSize: true,
-// autoHeight: true,
+autoHeight: true,
 // Default parameters
  slidesPerView: 1,
 spaceBetween: 8,
