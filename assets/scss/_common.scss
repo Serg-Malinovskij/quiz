@@ -1,0 +1,22 @@
+// Заголовки, общие БЭМ блоки и прочее
+
+.page {
+
+  // .page__main
+  &__main {
+  }
+
+  // .page__innovations
+  &__innovations {
+  }
+}
+
+.button{
+  display: inline-flex;
+height: 45px;
+padding: 12px 32px 10px 32px;
+}
+
+
+
+
