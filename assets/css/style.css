@@ -517,7 +517,7 @@ body._lock {
   left: 0;
   width: 20%;
   height: 19vw;
-  background: url("../img/main/decor-left.png") center/cover no-repeat;
+  background: url("../img/main/decor-left.webp") center/cover no-repeat;
 }
 @media (max-width: 600px) {
   .main-body:before {
@@ -533,7 +533,7 @@ body._lock {
   right: 0;
   width: 20%;
   height: 19vw;
-  background: url("../img/main/decor-right.png") center/cover no-repeat;
+  background: url("../img/main/decor-right.webp") center/cover no-repeat;
 }
 @media (max-width: 600px) {
   .main-body:after {
