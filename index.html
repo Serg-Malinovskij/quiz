@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="shortcut icon" href="assets/img/favicon_io/favicon-16x16.png">
+	<link rel="shortcut icon" href="assets/img/favicon_io/favicon.ico">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
@@ -22,8 +22,8 @@
 				<div class="header__logo"><a href="#main">Super Quiz</a></div>
 				<nav class="header__menu menu">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="#offers" class="menu__link">Главная</a><img src="assets/img/header/menu-arrow.svg" alt="icon" class="menu__arrow arrow"></li>
-						<li class="menu__item"><a href="#details" class="menu__link">Квиз</a><img src="assets/img/header/menu-arrow.svg"  alt="icon" class="menu__arrow arrow"></li>
+						<li class="menu__item"><a href="#" class="menu__link">Главная</a><img src="assets/img/header/menu-arrow.svg" alt="icon" class="menu__arrow arrow"></li>
+						<li class="menu__item"><a href="#quiz" class="menu__link">Квиз</a><img src="assets/img/header/menu-arrow.svg"  alt="icon" class="menu__arrow arrow"></li>
 						<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a><img src="assets/img/header/menu-arrow.svg" alt="icon" class="menu__arrow arrow"></li>
 						<li class="menu__item">
 							<a href="#contacts" class="menu__link">Не главная</a><img src="assets/img/header/menu-arrow.svg" class="menu__arrow arrow">
@@ -78,7 +78,7 @@
 			</section>
 
 
-			<section class="quiz">
+			<section class="quiz" id="quiz">
 				<div class="quiz__container">
 					<div class="quiz__header header-quiz">
 						<div class="header-quiz__item">
@@ -254,7 +254,7 @@
 				</div>
 			</section>
 
-			<div class="reviews">
+			<div class="reviews" id="reviews">
 				<div class="reviews__container">
 					<div class="reviews__slider swiper">
 						<div class="reviews__wrapper swiper-wrapper">
@@ -264,7 +264,11 @@
 										<img src="assets/img/slider/Union.png" alt="decor">
 									</div>
 									<div class="slide-reviews__content-image">
-										<img src="assets/img/slider/profile03.jpg" alt="profile">
+										<picture>
+											<source type="image/webp" srcset="assets/img/slider/profile03.webp">
+											<source srcset="assets/img/slider/profile03.jpg">
+											<img src="assets/img/slider/profile03.jpg" alt="profile">
+										</picture>
 									</div>
 									<div class="slide-reviews__content-name">Тимур Никитенко</div>
 									<div class="slide-reviews__content-text">Господа, глубокий уровень погружения в значительной степени
@@ -278,7 +282,12 @@
 										<img src="assets/img/slider/Union.png" alt="decor">
 									</div>
 									<div class="slide-reviews__content-image">
-										<img src="assets/img/slider/profile02.jpg" alt="profile">
+										<picture>
+											<source type="image/webp" srcset="assets/img/slider/profile02.webp">
+											<source srcset="assets/img/slider/profile02.jpg">
+											<img src="assets/img/slider/profile02.jpg" alt="profile">
+										</picture>
+										
 									</div>
 									<div class="slide-reviews__content-name">Андрей Пархимович</div>
 									<div class="slide-reviews__content-text">В целом, конечно, постоянное информационно-пропагандистское
@@ -293,7 +302,11 @@
 										<img src="assets/img/slider/Union.png" alt="decor">
 									</div>
 									<div class="slide-reviews__content-image">
-										<img src="assets/img/slider/profile03.jpg" alt="profile">
+										<picture>
+											<source type="image/webp" srcset="assets/img/slider/profile03.webp">
+											<source srcset="assets/img/slider/profile03.jpg">
+											<img src="assets/img/slider/profile03.jpg" alt="profile">
+										</picture>
 									</div>
 									<div class="slide-reviews__content-name">Артур Усович</div>
 									<div class="slide-reviews__content-text">Задача организации, в особенности же убеждённость некоторых
@@ -306,7 +319,11 @@
 										<img src="assets/img/slider/Union.png" alt="decor">
 									</div>
 									<div class="slide-reviews__content-image">
-										<img src="assets/img/slider/profile04.jpg" alt="profile">
+										<picture>
+											<source type="image/webp" srcset="assets/img/slider/profile04.webp">
+											<source srcset="assets/img/slider/profile04.jpg">
+											<img src="assets/img/slider/profile04.jpg" alt="profile">
+										</picture>
 									</div>
 									<div class="slide-reviews__content-name">Егор Грей</div>
 									<div class="slide-reviews__content-text">Разнообразный и богатый опыт говорит нам, что высокое
@@ -320,7 +337,11 @@
 										<img src="assets/img/slider/Union.png" alt="decor">
 									</div>
 									<div class="slide-reviews__content-image">
-										<img src="assets/img/slider/profile04.jpg" alt="profile">
+										<picture>
+											<source type="image/webp" srcset="assets/img/slider/profile02.webp">
+											<source srcset="assets/img/slider/profile02.jpg">
+											<img src="assets/img/slider/profile02.jpg" alt="profile">
+										</picture>
 									</div>
 									<div class="slide-reviews__content-name">Егор Грей</div>
 									<div class="slide-reviews__content-text">Разнообразный и богатый опыт говорит нам, что высокое
@@ -334,10 +355,6 @@
 					</div>
 				</div>
 			</div>
-
-
-
-
 
 		</main>
 
@@ -355,9 +372,9 @@
 				</div>
 				<div class="footer__bottom">
 					<div class="footer__social-items">
-						<a href="#" class="footer__social-item"><img src="assets/img/footer/tiktok.jpg" alt="social-icon"></a>
-						<a href="#" class="footer__social-item"><img src="assets/img/footer/vk.jpg" alt="social-icon"></a>
-						<a href="#" class="footer__social-item"><img src="assets/img/footer/tg.jpg" alt="social-icon"></a>
+						<a href="#" class="footer__social-item"><img src="assets/img/footer/tiktok1.svg" alt="social-icon"></a>
+						<a href="#" class="footer__social-item"><img src="assets/img/footer/vk-1.svg" alt="social-icon"></a>
+						<a href="#" class="footer__social-item"><img src="assets/img/footer/telegram1.svg" alt="social-icon"></a>
 					</div>
 					<a href="#" class="footer__logo">Super Quiz</a>
 				</div>
