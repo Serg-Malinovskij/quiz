@@ -8,8 +8,8 @@ const menuItems = document.querySelectorAll('.menu__item');  // получаем
 
 const actionHeader = document.querySelector('.header__action');  // получаем в константу блок с соц сетями и кнопкой
 
-console.log(iconBurger);
-iconBurger.addEventListener('click', function (e) {
+console.log(menuItems);
+iconBurger.addEventListener('click', function () {
   iconBurger.classList.toggle('menu-open');
   headerMenu.classList.toggle('_open');
   actionHeader.classList.toggle('_open'); 
@@ -24,7 +24,7 @@ item.addEventListener('click', function(){
   actionHeader.classList.remove('_open'); 
   document.body.classList.remove('_lock');
 })
-})
+});
 
 // всплывающее окно
 const headerButton = document.querySelector(".header__button");
