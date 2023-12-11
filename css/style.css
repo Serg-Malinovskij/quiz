@@ -1014,7 +1014,7 @@ body._lock {
   left: 50%;
   width: 128px;
   height: 96px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -48%);
 }
 .slide-reviews__content-name {
   font-size: 24px;
