@@ -3,7 +3,7 @@
 // menu-burger
 const iconBurger = document.querySelector('.menu__icon');  // получаем в константу иконку меню-бургер
 const headerMenu = document.querySelector('.header__menu');  // получаем в константу весь блок с меню
-const menuItem = document.querySelectorAll('.menu__item');  // получаем в константу все пункты меню
+const menuItems = document.querySelectorAll('.menu__item');  // получаем в константу все пункты меню
 
 
 const actionHeader = document.querySelector('.header__action');  // получаем в константу блок с соц сетями и кнопкой
@@ -12,12 +12,19 @@ console.log(iconBurger);
 iconBurger.addEventListener('click', function (e) {
   iconBurger.classList.toggle('menu-open');
   headerMenu.classList.toggle('_open');
-
-  actionHeader.classList.toggle('_open');
- 
+  actionHeader.classList.toggle('_open'); 
   document.body.classList.toggle('_lock');
 }
 );
+
+menuItems.forEach((item)=>{
+item.addEventListener('click', function(){
+  iconBurger.classList.remove('menu-open');
+  headerMenu.classList.remove('_open');
+  actionHeader.classList.remove('_open'); 
+  document.body.classList.remove('_lock');
+})
+})
 
 // всплывающее окно
 const headerButton = document.querySelector(".header__button");
